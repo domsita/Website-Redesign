@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BizLight Theme</title>
+    <title>DS</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
     <div id="main-page-bg">
-        <div class="container-fluid row col-md-12">
+        <div class="container-fluid col-md-12 row">
 
             <div class="container col-md-3">
-
-                <div class="btn-group-vertical" role="main-group" aria-label="Main Menu Options">
-                    <button class="btn btn-primary" href="#" id="project-button">Projects</a>
-                    <button class="btn btn-primary" href="#" id="about-button">About</a>
-                    <button class="btn btn-primary" href="#" id="contact-button">Contact</a>
+                <div class="container" id="button-container">
+                    <ul>
+                        <li><button type="button" class="main-buttons" id="project-button">Projects</button></li>
+                        <li><button type="button" class="main-buttons" id="about-button">About</button></li>
+                        <li><button type="button" class="main-buttons" id="contact-button">Contact</button></li>
+                    </ul>
                 </div>
-
             </div> <!--End of menu-button container -->
 
             <div class="container col-md-9" id="display-box">
@@ -54,24 +54,32 @@
     <script src="scripts/project-tab.js"></script>
     <script type="text/javascript">
             $("#project-button").click(function() {
+                $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+                $( this ).addClass( 'active' );
                 $("#about-tab").hide();
                 $("#contact-tab").hide();
                 $("#project-tab").toggle();
             });
 
             $("#about-button").click(function() {
+                $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+                $( this ).addClass( 'active' );
                 $("#contact-tab").hide();
                 $("#project-tab").hide();
                 $("#about-tab").toggle();
             });
 
             $("#contact-button").click(function() {
+                $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+                $( this ).addClass( 'active' );
                 $("#project-tab").hide();
                 $("#about-tab").hide();
                 $("#contact-tab").toggle();
             });
 
     </script>
+
+
 
 
   </body>

@@ -10,3 +10,26 @@ html, body {
     background: url('../img/b-man-skew.jpg');
     background-size: cover;
 }
+
+#button-container {
+    margin-top: 150%;
+    text-align: center;
+}
+
+#button-container button {
+    background: none;
+    color: #39FF14;
+    border: 1px solid #39FF14;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+    width: 100%;
+    margin-bottom: .3em;
+}
+
+#button-container button:hover, #button-container button:active {
+    background-color: #39FF14;
+    color: black;
+    opacity: 0.5;
+}
