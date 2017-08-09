@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+  <html>
+
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/DSLogo.ico" />
+    <title>Explodi-Ball</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content="height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="eb/eb.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101879616-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+  </head>
+
+  <body>
+
+    <div id="container-exp">
+
+        <div id="container-menu">
+            <button class="menuButtons" id="one">1 Bomb</button>
+            <button class="menuButtons" id="three">3 Bombs</button>
+            <button class="menuButtons" id="timed">Timed</button>
+            <button class="menuButtons" id="practice">Practice</button>
+            <button class="menuButtons" id="quit">Quit</button>
+        </div>
+
+
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+        <div id="welcome">
+            <h3 id="welcomeName">Explodi-Ball!</h3>
+            <p>Instructions: Click to place a bomb. <br />Pick a game mode above.</p>
+        </div>
+
+        <div id="winScreen">
+            <h1 id="winScore">99</h1>
+            <p>HIGH SCORE! You're like the circle-destroying Michael Jordan!</p>
+            <form id="addForm" action="eb/add.php" method="post"><p>Enter your initials: <input type="text" id="initialInput" limit="5" value="GUEST"></input><br /><input type="button" id="submitInitials" value="Submit Score and Play Again!" class="menuButtons"></input></p></form>
+
+        </div>
+
+        <div id="scoreBoard">
+            <h3 id="score">Score: &infin;</h3>
+            <h3 id="timer">Timer: &infin;</h3>
+            <h3 id="bombs">Bombs: &infin;</h3>
+            <div id="highScores">
+                <table id="scoreSelect">
+                        <tr><td><input type="button" id="1BombLB" value="1 Bomb Rankings" class="leaderBoardButtons"></input></td></tr>
+                        <tr><td><input type="button" id="3BombLB" value="3 Bombs Rankings" class="leaderBoardButtons"></input></td></tr>
+                        <tr><td><input type="button" id="timedLB" value="Timed Rankings" class="leaderBoardButtons"></input></td></tr>
+                </table>
+                <table id="leaderBoard">
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainPageLinks">
+        <a href="index.html" class="codelinks">Back</a>
+        <a href="https://github.com/domsita/explodiball" class="codelinks" target="_blank">Check out the code</a>
+    </div>
+
+    <script type="text/javascript" src="eb/eb.js"></script>
+    <script type="text/javascript" src="eb/classes.js"></script>
+    <script type="text/javascript" src="eb/leaderboard.js"></script>
+
+    <script>
+        $(function () {
+            load();
+            getLeaders(getRan(1, 4));
+            cycleLeaders();
+
+            $('#one').click(function() {
+                clearDisplay();
+                startMoves(1);
+                getLeaders('1');
+            });
+
+            $('#three').click(function() {
+                clearDisplay();
+                startMoves(3);
+                getLeaders('3');
+            });
+
+            $('#timed').click(function() {
+                clearDisplay();
+                startTimed();
+                getLeaders('2');
+            });
+
+            $('#practice').click(function(){
+                clearDisplay();
+                startPractice();
+            });
+
+            $('#quit').click(function () {
+                window.location.reload();
+            });
+
+            $('#mainMenu').click(function () {
+                window.location.reload();
+            });
+
+            $('#submitInitials').click(function (event) {
+                event.preventDefault();
+                $(this).replaceWith('<input type="button" onclick="reload()" class="menuButtons" id="mainMenu" value="Main Menu"></input>');
+                getInitials();
+            });
+
+            $('#1BombLB').click(function () {
+                getLeaders('1');
+            });
+
+            $('#3BombLB').click(function () {
+                getLeaders('3');
+            });
+
+            $('#timedLB').click(function () {
+                getLeaders('2');
+            });
+        });
+
+        function reload() {
+            window.location.reload();
+        }
+
+
+    </script>
+
+ </body>
+ </html>

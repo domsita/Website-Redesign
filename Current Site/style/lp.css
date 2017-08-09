@@ -1,0 +1,52 @@
+html, body {
+  display:inline-block;
+  height:100%;
+  width: 100%;
+  margin: 0px;
+  background-color: #693bcd0D;
+}
+
+#bg-wrapper {
+  height: 30%;
+  width: 30%;
+  margin: auto;
+  margin-top: 80px;
+
+}
+
+#bg {
+  display:inline-block;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("../DSLogo.png");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#greeting {
+  width: 100%;
+  font-size: 48px;
+  color: #3b72cd;
+  text-align:center;
+  margin: auto;
+  margin-top:20px;
+}
+
+#lplinklist {
+  list-style: none;
+  border:1px solid black;
+}
+
+.lplinks a {
+  display:block;
+  margin: auto;
+  height: 80px;
+  width: 200px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration:none;
+  font-size: 32px;
+  background-color: #3bcd95;
+  border-radius: 20px;
+}

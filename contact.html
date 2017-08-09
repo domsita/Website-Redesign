@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DS</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- <div id="main-page-bg"> -->
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">DS</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <fieldset class="container" id="contact-form">
+        <form>
+          <div class="form-group row">
+            <!-- name input -->
+            <label class="col-1" for="name">Name:</label>
+            <div class="col-3">
+              <input class="form-control" type="text" value="" id="name">
+            </div>
+
+            <!-- email input -->
+            <label class="col-1" for="email">Email:</label>
+            <div class="col-3">
+              <input class="form-control" type="text" value="" id="email">
+            </div>
+
+            <!-- email input -->
+            <label class="col-1" for="phone">Phone:</label>
+            <div class="col-3">
+              <input class="form-control" type="tel" value="" id="phone">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="message" class="col-1">Message:</label>
+            <textarea class="form-control col-7" id="message" rows="3"></textarea>
+
+            <div class="col-4" id="submit-box">
+              <div class="form-group row">
+                <label for="phone-pref" class="col-6 col-form-label">Preferred Contact</label>
+                <select class="form-control col-6" name="phone-pref">
+                  <option value="email-selected">Email</option>
+                  <option value="phone-selected">Phone</option>
+                  <option value="either-selected">Either</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary" type="button" name="submit">Submit</button>
+
+            </div>
+
+          </div>
+
+
+        </form>
+
+
+      </fieldset>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- The project tab -->
+    <script src="scripts/project-tab.js"></script>
+
+
+
+
+
+  </body>
+</html>

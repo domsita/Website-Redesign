@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+  <html>
+
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/DSLogo.ico" />
+    <title>Projects - Domenic Sita</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/projects.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101879616-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </head>
+
+  <body>
+    <div id="header">
+      <a href="index.html"><div id="header-logo"><div id="logo-img"></div></div>
+      <div id="header-name"><p>Domenic Sita</p></div></a>
+      <div id="header-links">
+        <ul>
+          <li class="active"><a href="index.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="container-main">
+        <div id="container-explodiball">
+            <fieldset class="mainPage">
+                <img id="ebimg" src="images/explodiball.png"></img>
+                <a id="explodiball-play" href="eb.html">PLAY</a>
+                <a href="https://github.com/domsita/explodiball" class="codelinks" target="_blank">Check out the code</a>
+            </fieldset>
+        </div>
+
+
+      <div id="container-connect">
+        <div id="connect-overlay"></div>
+          <fieldset class="mainPage">
+            <div id="topDisplay"><h2>CONNECT 4</h2></div>
+            <div id="board"></div>
+            <button id="newButton" onclick="start()">PLAY</button>
+            <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="codelinks" target="_blank">Check out the code</a>
+          </fieldset>
+      </div>
+
+      <div id="calc">
+        <fieldset class="mainPage">
+          <div id="calc-wrapper">
+            <div id="container-calc">
+              <div id="display"></div>
+              <div class="table-container" id="lefttable">
+                <table id="ops">
+                  <tr><td><button type="button" onclick="push('+')">+</button></td></tr>
+                  <tr><td><button type="button" onclick="push('-')">-</button></td></tr>
+                  <tr><td><button type="button" onclick="push('/')">/</button></td></tr>
+                  <tr><td><button type="button" onclick="push('*')">*</button></td></tr>
+                </table>
+              </div>
+
+              <div class="table-container">
+                <table id="nums">
+                  <td><tr><td><button type="button" onclick="push(1)">1</button></td>
+                  <td><button type="button" onclick="push(2)">2</button></td>
+                  <td><button type="button" onclick="push(3)">3</button><br></td></tr>
+
+                  <tr><td><button type="button" onclick="push(4)">4</button></td>
+                  <td><button type="button" onclick="push(5)">5</button></td>
+                  <td><button type="button" onclick="push(6)">6</button><br></td></tr>
+
+                  <tr><td><button type="button" onclick="push(7)">7</button></td>
+                  <td><button type="button" onclick="push(8)">8</button></td>
+                  <td><button type="button" onclick="push(9)">9</button><br></td></tr>
+
+                  <tr><td></td><td><button type="button" onclick="push(0)">0</button><br></td></tr>
+                </table>
+              </div>
+
+              <div class="table-container">
+                <table id="acts">
+                  <tr><td><button type="button" onclick="removeLast()">&larr;</button></td></tr>
+                  <tr><td><button type="button" onclick="clearAll()">clear</button></td></tr>
+                  <tr id="enter"><td><button type="button" onclick="equals()">Enter</button></td></tr>
+                </table>
+              </div>
+
+              <div id="result-container"><div id="result"></div></div>
+            </div>
+          </div>
+          <a href="https://github.com/domsita/Projects/blob/master/Website/calc.js" class="codelinks" target="_blank">Check out the code</a>
+        </fieldset>
+      </div>
+
+    </div>
+
+  <script src="scripts/connect.js"></script>
+  <script src="scripts/calc.js"></script>
+  <script src="scripts/more.js"></script>
+  <script>
+
+    $(document).ready(function() {});
+
+  </script>
+  </body>
+
+  </html>
