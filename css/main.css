@@ -282,7 +282,7 @@ body {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #292b2c;
+  color: #fff;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -2291,7 +2291,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #292b2c;
+  color: #fff;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3511,7 +3511,7 @@ a.badge:focus, a.badge:hover {
     text-decoration: none;
     background-color: #f7f7f9; }
   .list-group-item-action:active {
-    color: #292b2c;
+    color: #fff;
     background-color: #eceeef; }
 
 .list-group-item {
@@ -6651,25 +6651,5 @@ html, body {
   min-width: 100%;
   background: url("../img/b-man-skew.jpg");
   background-size: cover; }
-
-#button-container {
-  margin-top: 150%;
-  text-align: center; }
-
-#button-container button {
-  background: none;
-  color: #39FF14;
-  border: 1px solid #39FF14;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.8em;
-  font-weight: 100;
-  width: 100%;
-  margin-bottom: .3em; }
-
-#button-container button:hover, #button-container button:active {
-  background-color: #39FF14;
-  color: black;
-  opacity: 0.5; }
 
 /*# sourceMappingURL=main.css.map */
