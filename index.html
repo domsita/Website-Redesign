@@ -10,7 +10,7 @@
 
   <body>
     <div id="main-page-bg">
-
+        <!-- Site Navigation -->
         <nav class="navbar navbar-toggleable-md navbar-inverse">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,66 +25,52 @@
             </div>
         </nav>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Launch demo modal
-        </button>
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
+          <a class="btn btn-primary" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
+        </p>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">A JavaScript Calculator</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <div id="display" style="height: 2em;"></div>
-                                <div class="container" id="calc">
-                                    <table>
-                                        <tr>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
-                                            <td><button class="btn btn-secondary btn-lg"  type="button" onclick="push(1)">1</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
-                                            <td></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
-                                            <td></td>
-                                            <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="col-3" style="max-height: 16em;">       <div id="result"></div>     </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="https://github.com/domsita/Projects/blob/master/Website/calc.js" class="btn btn-secondary" target="_blank">Check out the code</a>
-                    </div>
-                    <script src="scripts/calc.js"></script>
-                </div>
-            </div>
+        <div class="collapse" id="connect">
+          <div id="connect-overlay"></div>
+            <fieldset class="mainPage">
+              <div id="topDisplay"><h2>CONNECT 4</h2></div>
+              <div id="board"></div>
+              <button id="newButton" onclick="start()">PLAY</button>
+              <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="codelinks" target="_blank">Check out the code</a>
+            </fieldset>
         </div>
+
+        <div class="collapse" id="calculator">
+          <div class="container" id="calc">
+            <div id="display" style="height: 2em; color: red;"></div>
+            <div class="float-left">
+                <table>    <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(1)">1</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
+                          </tr><tr>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
+                          </tr><tr>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
+                          </tr><tr>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
+                                   <td></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
+                                   <td></td>
+                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
+                          </tr>
+                </table>
+              </div>
+              <div style="max-height: 16em; color: red;">       <div id="result"></div>     </div>
+          </div>
 
 
 
@@ -92,10 +78,8 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-
-
-
-
+    <script src="scripts/calc.js"></script>
+    <script src="scripts/connect.js"></script>
 
 
   </body>
