@@ -134,11 +134,15 @@ function clearDisplay() {
 // Helper Functions ---------------------------------------------------------------------------------------------
 function clickHandler() {
     $('#myCanvas').click(function (e) {
-        var xClicked = e.pageX - this.offsetLeft;
-        var yClicked = e.pageY - this.offsetTop;
+      var offset = $(this).offset();
+      console.log( "left: " + offset.left + ", top: " + offset.top );
+
+        var xClicked = e.pageX - offset.left;
+        var yClicked = e.pageY - this.offsetTop - offset.top;
         if (inProgress) {
             board.click(xClicked, yClicked);
         }
+        console.log(e.pageX + " / " + e.pageY + " || " +xClicked+" / "+yClicked);
     });
 }
 

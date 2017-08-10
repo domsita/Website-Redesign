@@ -6,7 +6,7 @@
     <title>Explodi-Ball</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" content="height=device-height, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="eb/eb.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
@@ -18,55 +18,62 @@
       ga('create', 'UA-101879616-1', 'auto');
       ga('send', 'pageview');
     </script>
-    
+
   </head>
 
   <body>
-
-    <div id="container-exp">
-
-        <div id="container-menu">
-            <button class="menuButtons" id="one">1 Bomb</button>
-            <button class="menuButtons" id="three">3 Bombs</button>
-            <button class="menuButtons" id="timed">Timed</button>
-            <button class="menuButtons" id="practice">Practice</button>
-            <button class="menuButtons" id="quit">Quit</button>
-        </div>
-
-
-        <canvas id="myCanvas" width="500" height="500"></canvas>
+    <div class="container" id="eb">
+      <div class="row">
         <div id="welcome">
             <h3 id="welcomeName">Explodi-Ball!</h3>
             <p>Instructions: Click to place a bomb. <br />Pick a game mode above.</p>
         </div>
+      </div>
 
-        <div id="winScreen">
+      <div class="row">
+
+        <div class="container col-md-2">
+          <div class="btn-group-vertical">
+              <button class="btn btn-primary" id="one">1 Bomb</button>
+              <button class="btn btn-primary" id="three">3 Bombs</button>
+              <button class="btn btn-primary" id="timed">Timed</button>
+              <button class="btn btn-primary" id="practice">Practice</button>
+              <button class="btn btn-primary" id="quit">Quit</button>
+          </div>
+
+          <div id="winScreen">
             <h1 id="winScore">99</h1>
             <p>HIGH SCORE! You're like the circle-destroying Michael Jordan!</p>
-            <form id="addForm" action="eb/add.php" method="post"><p>Enter your initials: <input type="text" id="initialInput" limit="5" value="GUEST"></input><br /><input type="button" id="submitInitials" value="Submit Score and Play Again!" class="menuButtons"></input></p></form>
-
+            <form id="addForm" action="eb/add.php" method="post"><p>Enter your initials: <input type="text" id="initialInput" limit="5" value="GUEST"></input><br /><input type="button" id="submitInitials" value="Submit Score!" class="btn btn-primary"></input></p></form>
+          </div>
+        </div>
+        <div class="container col-md-7">
+            <canvas id="myCanvas" width="500" height="500"></canvas>
         </div>
 
-        <div id="scoreBoard">
+        <div id="scoreBoard" class="col-md-3">
             <h3 id="score">Score: &infin;</h3>
             <h3 id="timer">Timer: &infin;</h3>
             <h3 id="bombs">Bombs: &infin;</h3>
             <div id="highScores">
                 <table id="scoreSelect">
-                        <tr><td><input type="button" id="1BombLB" value="1 Bomb Rankings" class="leaderBoardButtons"></input></td></tr>
-                        <tr><td><input type="button" id="3BombLB" value="3 Bombs Rankings" class="leaderBoardButtons"></input></td></tr>
-                        <tr><td><input type="button" id="timedLB" value="Timed Rankings" class="leaderBoardButtons"></input></td></tr>
+                        <tr><td><input type="button" id="1BombLB" value="1 Bomb Rankings" class="btn btn-primary"></input></td></tr>
+                        <tr><td><input type="button" id="3BombLB" value="3 Bombs Rankings" class="btn btn-primary"></input></td></tr>
+                        <tr><td><input type="button" id="timedLB" value="Timed Rankings" class="btn btn-primary"></input></td></tr>
                 </table>
                 <table id="leaderBoard">
 
                 </table>
             </div>
         </div>
-    </div>
+      </div>
 
-    <div id="mainPageLinks">
-        <a href="index.html" class="codelinks">Back</a>
-        <a href="https://github.com/domsita/explodiball" class="codelinks" target="_blank">Check out the code</a>
+
+
+      <div id="mainPageLinks">
+          <a href="index.html" class="btn btn-danger">Back</a>
+          <a href="https://github.com/domsita/explodiball" class="btn btn-primary" target="_blank">Check out the code</a>
+      </div>
     </div>
 
     <script type="text/javascript" src="eb/eb.js"></script>
@@ -112,7 +119,7 @@
 
             $('#submitInitials').click(function (event) {
                 event.preventDefault();
-                $(this).replaceWith('<input type="button" onclick="reload()" class="menuButtons" id="mainMenu" value="Main Menu"></input>');
+                $(this).replaceWith('<input type="button" onclick="reload()" class="btn btn-primary" id="mainMenu" value="Main Menu"></input>');
                 getInitials();
             });
 
@@ -135,6 +142,7 @@
 
 
     </script>
-
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
  </body>
  </html>

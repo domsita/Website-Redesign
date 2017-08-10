@@ -10,68 +10,169 @@
 
   <body>
     <div id="main-page-bg">
-        <!-- Site Navigation -->
-        <nav class="navbar navbar-toggleable-md navbar-inverse">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">DS</a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="/index.html">Projects<span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                </ul>
+      <!-- Main Navigation -->
+      <div class="btn-group-vertical">
+        <a class="btn btn-primary" href="eb.html" >Explodi-ball</a>
+        <a class="btn btn-primary" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
+        <a class="btn btn-primary" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-form">Contact</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#about">About</button>
+      </div>
+
+      <!-- Connect 4 container -->
+      <div class="collapse" id="connect">
+        <div id="connect-overlay"></div>
+          <fieldset class="mainPage">
+            <div id="topDisplay"><h2>CONNECT 4</h2></div>
+            <div id="board"></div>
+            <button id="newButton" onclick="start()">PLAY</button>
+            <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="codelinks" target="_blank">Check out the code</a>
+          </fieldset>
+      </div><!-- End Connect 4  -->
+
+      <!-- Calculator container -->
+      <div class="collapse" id="calculator">
+        <div class="container" id="calc">
+          <div id="display" style="height: 2em; color: red;"></div>
+          <div class="float-left">
+              <table>    <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(1)">1</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
+                        </tr><tr>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
+                        </tr><tr>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
+                        </tr><tr>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
+                                 <td></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
+                                 <td></td>
+                                 <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
+                        </tr>
+              </table>
             </div>
-        </nav>
-
-        <p>
-          <a class="btn btn-primary" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
-          <a class="btn btn-primary" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
-        </p>
-
-        <div class="collapse" id="connect">
-          <div id="connect-overlay"></div>
-            <fieldset class="mainPage">
-              <div id="topDisplay"><h2>CONNECT 4</h2></div>
-              <div id="board"></div>
-              <button id="newButton" onclick="start()">PLAY</button>
-              <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="codelinks" target="_blank">Check out the code</a>
-            </fieldset>
+            <div style="max-height: 16em; color: red;">
+              <div id="result"></div>
+            </div>
         </div>
+      </div><!-- End Calculator  -->
 
-        <div class="collapse" id="calculator">
-          <div class="container" id="calc">
-            <div id="display" style="height: 2em; color: red;"></div>
-            <div class="float-left">
-                <table>    <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(1)">1</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
-                          </tr><tr>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
-                          </tr><tr>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
-                          </tr><tr>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
-                                   <td></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
-                                   <td></td>
-                                   <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
-                          </tr>
-                </table>
+      <!-- Contact From Modal -->
+      <div class="modal fade bd-modal-lg" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact-form-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">  <h5 class="modal-title" id="contact-form-modal">Send me a Message.</h5>   </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <form action="#" method="post">
+                  <div class="form-group row align-items-center">
+                      <!-- name input -->
+                      <label class="col-md-1 col-form-label col-form-label" for="name">Name:</label>
+                      <div class="col-md-3">
+                          <input class="form-control form-control-sm" type="text" value="" id="name">
+                      </div>
+                      <!-- email input -->
+                      <label class="col-md-1 col-form-label col-form-label" for="email">Email:</label>
+                      <div class="col-md-3">
+                          <input class="form-control form-control-sm" type="text" value="" id="email">
+                      </div>
+                      <!-- phone input -->
+                      <label class="col-md-1 col-form-label col-form-label" for="phone">Phone:</label>
+                      <div class="col-md-3">
+                          <input class="form-control form-control-sm" type="tel" value="" id="phone">
+                      </div>
+                  </div>
+
+                  <div class="form-group row align-items-center">
+                    <label for="message" class="form-label">Message:</label>
+                    <div class="col-md-8">
+                      <textarea class="form-control" id="message" rows="4" style="width: 100%;"></textarea>
+                    </div>
+
+                    <label for="phone-pref" class="col-form-label">You Prefer:</label>
+                    <div class="col-md-2">
+                        <select class="form-control form-control-sm" name="phone-pref">
+                            <option value="email-selected">Email</option>
+                            <option value="phone-selected">Phone</option>
+                            <option value="either-selected">Either</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="row justify-content-center">
+                    <button type="button" class="btn btn-primary col-2">Send Message</button>
+                  </div>
+
+                </form>
               </div>
-              <div style="max-height: 16em; color: red;">       <div id="result"></div>     </div>
-          </div>
+            </div>
 
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Contact Form -->
+
+      <!-- About section Modal -->
+      <div class="modal fade bd-modal-lg" id="about" tabindex="-1" role="dialog" aria-labelledby="about" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">  <h2 class="modal-title" id="about">Thanks for taking a look at my site!</h2>   </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row justify-content-center">
+                  <div class="col-md-3">
+                    <img src="img/Dom.jpg" class="img-fluid rounded float-right" alt="ME!">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="row justify-content-center">
+                      <p>My name is Domenic and I'm a web/software developer out of St. Louis MO.
+                        I made this site to showcase some of the projects I've been working on recently and I plan to update it regularly.
+                        Be sure to check back to see more of what I've been working on.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                      <h5>I'd love to hear from you!</h5>
+                    </div>
+                    <div class="row justify-content-center">
+                      <button type="button" class="btn btn-primary" id="aToC">Contact Me</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="btn-group-lg" role="group" aria-label="...">
+                      <a href="#" class="btn btn-outline-primary">My Resume</a>
+                      <a href="http://www.linkedin.com/in/domenic-sita" class="btn btn-outline-primary">LinkedIn</a>
+                      <a href="http://github.com/domsita" class="btn btn-outline-primary">GitHub</a>
+                      <a href="http://www.hackerrank.com/domsita" class="btn btn-outline-primary">HackerRank</a>
+                      <a href="http://www.codewars.com/users/domsita" class="btn btn-outline-primary">CodeWars</a>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-md-8">
+                      <div class="row"><div class="col-2">Strong:</div><div class="col-10">JavaScript, PHP, Python, MySQL</div></div>
+                      <div class="row"><div class="col-2">Familiar:</div><div class="col-10">C, C#, Java</div></div>
+                      <div class="row"><div class="col-2">Other:</div><div class="col-10">jQuery, WordPress, Bootstrap, SASS, JSON, AJAX, MEAN Stack (MongoDB, Express, Angular 4, Node.js)</div></div>
+                      <div class="row"><div class="col-2">Software:</div><div class="col-10">Atom, Visual Studio, Visual Studio Code, Xcode, Adobe CS, Gimp, Dropbox, MAMP, XAMPP, Koala, Scout</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Contact Form -->
 
 
     </div><!-- Background Image -->
@@ -80,7 +181,13 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="scripts/calc.js"></script>
     <script src="scripts/connect.js"></script>
+    <script type="text/javascript">
+    $('#aToC').click(function () {
+      $('#about').modal('hide');
+      $('#contact-form').modal('show');
+    });
 
+    </script>
 
   </body>
 </html>
