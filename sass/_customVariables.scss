@@ -181,7 +181,7 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:       $gray-dark !default;
+$body-bg:       $gray-lighter !default;
 $body-color:    $brand-primary !default;
 $inverse-bg:    $gray-lighter !default;
 $inverse-color: $brand-primary !default;
@@ -416,10 +416,10 @@ $input-padding-x:                .75rem !default;
 $input-padding-y:                .5rem !default;
 $input-line-height:              1.25 !default;
 
-$input-bg:                       $white !default;
+$input-bg:                       #555 !default;
 $input-bg-disabled:              $gray-lighter !default;
 
-$input-color:                    $gray !default;
+$input-color:                    $white !default;
 $input-border-color:             rgba($black,.15) !default;
 $input-btn-border-width:         $border-width !default; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075) !default;
@@ -505,7 +505,7 @@ $custom-select-indicator-padding:   1rem !default; // Extra padding to account f
 $custom-select-line-height:         $input-line-height !default;
 $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-light !default;
-$custom-select-bg:            $white !default;
+$custom-select-bg:            $gray !default;
 $custom-select-disabled-bg:   $gray-lighter !default;
 $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color: #333 !default;
@@ -796,13 +796,13 @@ $modal-dialog-sm-up-margin-y: 30px !default;
 
 $modal-title-line-height:     $line-height-base !default;
 
-$modal-content-bg:               $white !default;
-$modal-content-border-color:     rgba($black,.2) !default;
+$modal-content-bg:               $gray-dark !default;
+$modal-content-border-color:     $gray-lightest !default;
 $modal-content-border-width:     $border-width !default;
 $modal-content-xs-box-shadow:    0 3px 9px rgba($black,.5) !default;
 $modal-content-sm-up-box-shadow: 0 5px 15px rgba($black,.5) !default;
 
-$modal-backdrop-bg:           $black !default;
+$modal-backdrop-bg:           $gray-lighter !default;
 $modal-backdrop-opacity:      .5 !default;
 $modal-header-border-color:   $gray-lighter !default;
 $modal-footer-border-color:   $modal-header-border-color !default;

@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DS</title>
     <link rel="stylesheet" href="css/main.css">
+
   </head>
 
   <body>
     <div id="main-page-bg">
       <!-- Main Navigation -->
-      <div class="container" id="button-menu">
-        <div class="row align-items-center">
-          <button type="button" class="btn btn-main-nav" data-toggle="collapse" data-target="#projects">Projects</button>
-          <div class="collapse" id="projects">
-              <a class="btn btn-sub-nav" href="eb.html" >Explodi-ball</a>
-              <a class="btn btn-sub-nav" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
-              <a class="btn btn-sub-nav" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
+      <div class="container-fluid">
+          <div class="row justify-content-start">
+              <div class="col-3" id="button-menu">
+                  <button type="button" class="btn btn-main-nav" data-toggle="collapse" data-target="#projects">Projects</button>
+                  <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button>
+                  <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button>
+              </div>
+              <div class="col-6">
+                  <div class="collapse" id="projects">
+                      <div class="row justify-content-start">
+                          <a class="btn btn-sub-nav" href="eb.html" >Explodi-ball</a>
+                          <a class="btn btn-sub-nav" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
+                          <a class="btn btn-sub-nav" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="row align-items-center">
-          <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button>
-        </div>
-        <div class="row align-items-center">
-          <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button>
-        </div>
       </div>
+
 
       <!-- Connect 4 container -->
       <div class="collapse" id="connect">
@@ -104,7 +107,7 @@
 
                   <div class="form-group row align-items-center">
                     <label for="message" class="form-label">Message:</label>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                       <textarea class="form-control" id="message" rows="4" style="width: 100%;"></textarea>
                     </div>
 
@@ -119,7 +122,7 @@
                   </div>
 
                   <div class="row justify-content-center">
-                    <button type="button" class="btn btn-primary col-2">Send Message</button>
+                    <button type="button" class="btn btn-primary">Send Message</button>
                   </div>
 
                 </form>
@@ -127,7 +130,7 @@
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -150,16 +153,15 @@
                         I made this site to showcase some of the projects I've been working on recently and I plan to update it regularly.
                         Be sure to check back to see more of what I've been working on.</p>
                     </div>
-                    <div class="row justify-content-center">
-                      <h5>I'd love to hear from you!</h5>
-                    </div>
-                    <div class="row justify-content-center">
-                      <button type="button" class="btn btn-primary" id="aToC">Contact Me</button>
+                    <div class="row align-items-center">
+                          <h5>I'd love to hear from you!</h5>
+                          <span style="margin-left: 1.5em;"></span>
+                          <button type="button" class="btn btn-primary" id="aToC">Contact Me</button>
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="btn-group-lg" role="group" aria-label="...">
+                <div class="row justify-content-center" id="about-links">
+                  <div class="btn-group" role="group" aria-label="...">
                       <a href="#" class="btn btn-outline-primary">My Resume</a>
                       <a href="http://www.linkedin.com/in/domenic-sita" class="btn btn-outline-primary">LinkedIn</a>
                       <a href="http://github.com/domsita" class="btn btn-outline-primary">GitHub</a>
@@ -167,7 +169,7 @@
                       <a href="http://www.codewars.com/users/domsita" class="btn btn-outline-primary">CodeWars</a>
                   </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" id="tech-skills">
                   <div class="col-md-8">
                       <div class="row"><div class="col-2">Strong:</div><div class="col-10">JavaScript, PHP, Python, MySQL</div></div>
                       <div class="row"><div class="col-2">Familiar:</div><div class="col-10">C, C#, Java</div></div>
@@ -178,7 +180,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -192,10 +194,10 @@
     <script src="scripts/calc.js"></script>
     <script src="scripts/connect.js"></script>
     <script type="text/javascript">
-    $('#aToC').click(function () {
-      $('#about').modal('hide');
-      $('#contact-form').modal('show');
-    });
+        $('#aToC').click(function () {
+          $('#about').modal('hide');
+          $('#contact-form').modal('show');
+        });
 
     </script>
 
