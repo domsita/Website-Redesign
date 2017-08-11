@@ -11,12 +11,22 @@
   <body>
     <div id="main-page-bg">
       <!-- Main Navigation -->
-      <div class="btn-group-vertical">
-        <a class="btn btn-primary" href="eb.html" >Explodi-ball</a>
-        <a class="btn btn-primary" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
-        <a class="btn btn-primary" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-form">Contact</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#about">About</button>
+      <div class="container" id="button-menu">
+        <div class="row align-items-center">
+          <button type="button" class="btn btn-main-nav" data-toggle="collapse" data-target="#projects">Projects</button>
+          <div class="collapse" id="projects">
+              <a class="btn btn-sub-nav" href="eb.html" >Explodi-ball</a>
+              <a class="btn btn-sub-nav" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="connectFour">Connect 4</a>
+              <a class="btn btn-sub-nav" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Calculator</a>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button>
+        </div>
+        <div class="row align-items-center">
+          <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button>
+        </div>
       </div>
 
       <!-- Connect 4 container -->
@@ -136,7 +146,7 @@
                   </div>
                   <div class="col-md-7">
                     <div class="row justify-content-center">
-                      <p>My name is Domenic and I'm a web/software developer out of St. Louis MO.
+                      <p>My name is Domenic and I'm a web/software developer in Missouri.
                         I made this site to showcase some of the projects I've been working on recently and I plan to update it regularly.
                         Be sure to check back to see more of what I've been working on.</p>
                     </div>
