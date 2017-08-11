@@ -4,7 +4,6 @@ Started 3/20/17 and completed 4/4/17.
 */
 var $board = $(  "#board"  );
 var $connectdisplay = $(  "#topDisplay"  );
-var $container = $(  "#container-connect"  );
 var board = new Array();
 var ct = 1;
 var win1 = "1,1,1,1";
@@ -43,7 +42,7 @@ function setBoard() {
 //locks the board at the current position if someone wins - buttons are no longer clickable.
 function lockBoard() {
   $(  "button.gray"  ).replaceWith('<div class="gray"></div>');
-  $(  "#resetButton"  ).replaceWith('<button id="againButton" onclick="reset()">AGAIN?</button>');
+  $(  "#resetButton"  ).replaceWith('<div class="row justify-content-center"><button id="againButton" class="btn" onclick="reset()">AGAIN?</button></div>');
 }
 
 // - - - - - - - UPDATING THE BOARD - - - - - - -
@@ -99,7 +98,7 @@ function printBoard() {
       $board.append('</tr>');
   }
   $board.append('<br>');
-  $board.append('<button id="resetButton" onclick="reset()">RESET</button>');
+  $board.append('<div class="row justify-content-center"><button id="resetButton" class="btn" onclick="reset()">RESET</button></div>');
 }
 
 function printRow(y) {
@@ -153,7 +152,7 @@ function checkWin(lastspot){
 // Provides a message if a winner is found and locks out any future moves.
 function wehaveawinner(n) {
   $connectdisplay.html('<h1 class="winheader">PLAYER '+n+' WINS</h1>');
-  $board.append('<h3 class="winheader">Pretty sneaky <span style="color:'+checkValue(n)+';">player '+n+'...</span></h3>');
+  $board.append('<div class="row justify-content-center"><h3 class="winheader">Pretty sneaky <span style="color:'+checkValue(n)+';">player '+n+'...</span></h3></div>');
   lockBoard();
 }
 

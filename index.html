@@ -12,12 +12,12 @@
   <body>
     <div id="main-page-bg">
       <!-- Main Navigation -->
-      <div class="container-fluid">
+      <div class="container">
           <div class="row justify-content-start">
               <div class="col-3" id="button-menu">
-                  <button type="button" class="btn btn-main-nav" data-toggle="collapse" data-target="#projects">Projects</button>
-                  <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button>
-                  <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button>
+                    <button type="button" class="btn btn-main-nav" data-toggle="collapse" data-target="#projects" id="project-button">Projects</button>
+                    <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button>
+                    <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button>
               </div>
               <div class="col-6">
                   <div class="collapse" id="projects">
@@ -34,18 +34,31 @@
 
       <!-- Connect 4 container -->
       <div class="collapse" id="connect">
-        <div id="connect-overlay"></div>
-          <fieldset class="mainPage">
-            <div id="topDisplay"><h2>CONNECT 4</h2></div>
-            <div id="board"></div>
-            <button id="newButton" onclick="start()">PLAY</button>
-            <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="codelinks" target="_blank">Check out the code</a>
-          </fieldset>
+        <div class="col-6 float-right" id="connect-overlay">
+            <div class="container justify-content-center">
+                <div id="topDisplay" class="row justify-content-center"><h1>CONNECT 4</h1></div>
+                <div class="row justify-content-center">
+                    <div id="board"></div>
+                </div>
+            </div>
+            <div class="container justify-content-center">
+                    <div class="row justify-content-center">
+                        <button id="newButton" class="btn" onclick="start()">PLAY</button>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="btn" target="_blank">Check out the code</a>
+                    </div>
+            </div>
+
+        </div>
+        <div class="float-right">
+            <a class="btn btn-sub-nav" data-toggle="collapse" href="#connect" aria-expanded="false" aria-controls="Connect">Close</a>
+        </div>
       </div><!-- End Connect 4  -->
 
       <!-- Calculator container -->
       <div class="collapse" id="calculator">
-        <div class="container" id="calc">
+        <div class="col-6 float-right" id="calc">
           <div id="display" style="height: 2em; color: red;"></div>
           <div class="float-left">
               <table>    <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
@@ -73,9 +86,12 @@
                         </tr>
               </table>
             </div>
-            <div style="max-height: 16em; color: red;">
-              <div id="result"></div>
+            <div>
+              <div class="float-right" id="result"></div>
             </div>
+        </div>
+        <div class="float-right">
+            <a class="btn btn-sub-nav" data-toggle="collapse" href="#calculator" aria-expanded="false" aria-controls="calculator">Close</a>
         </div>
       </div><!-- End Calculator  -->
 
@@ -198,6 +214,11 @@
           $('#about').modal('hide');
           $('#contact-form').modal('show');
         });
+
+        $('#project-button').on('click', function(){
+
+        });
+
 
     </script>
 
