@@ -1,3 +1,19 @@
 #eb {
-  color: #333;
+  margin: 1em;
+
+  .row {
+    margin: 1em;
+  }
+  background-color: $gray-dark;
+  color: $gray-lightest;
+  .btn {
+    width: 100%;
+    color: $gray-dark;
+  }
+}
+
+#game-modes{
+  .btn {
+    width: 15%;
+  }
 }

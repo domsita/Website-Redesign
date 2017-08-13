@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Muli:200");
 #eb {
-  color: #333; }
+  margin: 1em;
+  background-color: #292b2c;
+  color: #f7f7f9; }
+  #eb .row {
+    margin: 1em; }
+  #eb .btn {
+    width: 100%;
+    color: #292b2c; }
+
+#game-modes .btn {
+  width: 15%; }
 
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
@@ -283,11 +293,11 @@ html {
 
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
   color: #39ff14;
-  background-color: #eceeef; }
+  background-color: #292b2c; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -451,22 +461,22 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 3rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 2.25rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 2rem; }
 
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 h5, .h5 {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 .lead {
   font-size: 1.25rem;
@@ -528,7 +538,7 @@ mark,
 .blockquote {
   padding: 1rem 2rem;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   border-left: 0.25rem solid #eceeef; }
 
 .blockquote-footer {
@@ -556,7 +566,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #eceeef;
+  background-color: #292b2c;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
@@ -1604,7 +1614,7 @@ pre {
   .table tbody + tbody {
     border-top: 2px solid #eceeef; }
   .table .table {
-    background-color: #eceeef; }
+    background-color: #292b2c; }
 
 .table-sm th,
 .table-sm td {
@@ -1681,7 +1691,7 @@ pre {
     background-color: #ebcccc; }
 
 .thead-inverse th {
-  color: #eceeef;
+  color: #292b2c;
   background-color: #292b2c; }
 
 .thead-default th {
@@ -1689,12 +1699,12 @@ pre {
   background-color: #eceeef; }
 
 .table-inverse {
-  color: #eceeef;
+  color: #292b2c;
   background-color: #292b2c; }
   .table-inverse th,
   .table-inverse td,
   .table-inverse thead th {
-    border-color: #eceeef; }
+    border-color: #292b2c; }
   .table-inverse.table-bordered {
     border: 0; }
 
@@ -1710,7 +1720,7 @@ pre {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.25;
   color: #fff;
   background-color: #555;
@@ -1739,7 +1749,7 @@ pre {
     cursor: not-allowed; }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.25rem + 2px); }
+  height: calc(2.5625rem + 2px); }
 select.form-control:focus::-ms-value {
   color: #fff;
   background-color: #555; }
@@ -1756,18 +1766,18 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(0.75rem - 1px * 2);
   padding-bottom: calc(0.75rem - 1px * 2);
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem - 1px * 2);
   padding-bottom: calc(0.25rem - 1px * 2);
-  font-size: 0.875rem; }
+  font-size: 1rem; }
 
 .col-form-legend {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 .form-control-static {
   padding-top: 0.5rem;
@@ -1788,25 +1798,25 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 0.2rem; }
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: 1.8125rem; }
+  height: 2rem; }
 
 .form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   border-radius: 0.3rem; }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: 3.58333rem; }
+  height: 4.41667rem; }
 
 .form-group {
   margin-bottom: 2rem; }
@@ -1850,8 +1860,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .form-control-danger {
   padding-right: 2.25rem;
   background-repeat: no-repeat;
-  background-position: center right 0.5625rem;
-  background-size: 1.125rem 1.125rem; }
+  background-position: center right 0.64063rem;
+  background-size: 1.28125rem 1.28125rem; }
 
 .has-success .form-control-feedback,
 .has-success .form-control-label,
@@ -1970,7 +1980,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   user-select: none;
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out; }
   .btn:focus {
@@ -2260,12 +2270,12 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 0.2rem; }
 
 .btn-block {
@@ -2334,7 +2344,7 @@ tbody.collapse.show {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #39ff14;
   text-align: left;
   list-style: none;
@@ -2395,7 +2405,7 @@ tbody.collapse.show {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #636c72;
   white-space: nowrap; }
 
@@ -2575,7 +2585,7 @@ tbody.collapse.show {
 .input-group-addon {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
   color: #fff;
@@ -2587,13 +2597,13 @@ tbody.collapse.show {
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
     padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     border-radius: 0.2rem; }
   .input-group-addon.form-control-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     border-radius: 0.3rem; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
@@ -2656,7 +2666,7 @@ tbody.collapse.show {
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: 1.5rem;
+  min-height: 2rem;
   padding-left: 1.5rem;
   margin-right: 1rem;
   cursor: pointer; }
@@ -2670,7 +2680,7 @@ tbody.collapse.show {
     background-color: #39ff14;
     box-shadow: none; }
   .custom-control-input:focus ~ .custom-control-indicator {
-    box-shadow: 0 0 0 1px #eceeef, 0 0 0 3px #39ff14; }
+    box-shadow: 0 0 0 1px #292b2c, 0 0 0 3px #39ff14; }
   .custom-control-input:active ~ .custom-control-indicator {
     color: #fff;
     background-color: #cfffc7;
@@ -2684,7 +2694,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.25rem;
+  top: 0.5rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -2722,7 +2732,7 @@ tbody.collapse.show {
 .custom-select {
   display: inline-block;
   max-width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.5625rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   line-height: 1.25;
   color: #fff;
@@ -2841,8 +2851,8 @@ tbody.collapse.show {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #464a4c;
-    background-color: #eceeef;
-    border-color: #ddd #ddd #eceeef; }
+    background-color: #292b2c;
+    border-color: #ddd #ddd #292b2c; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-right-radius: 0;
@@ -2880,7 +2890,7 @@ tbody.collapse.show {
   padding-top: .25rem;
   padding-bottom: .25rem;
   margin-right: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:focus {
@@ -2906,7 +2916,7 @@ tbody.collapse.show {
 .navbar-toggler {
   align-self: flex-start;
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -3404,7 +3414,7 @@ tbody.collapse.show {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 .pagination-lg .page-item:first-child .page-link {
   border-bottom-left-radius: 0.3rem;
   border-top-left-radius: 0.3rem; }
@@ -3414,7 +3424,7 @@ tbody.collapse.show {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem; }
+  font-size: 1rem; }
 .pagination-sm .page-item:first-child .page-link {
   border-bottom-left-radius: 0.2rem;
   border-top-left-radius: 0.2rem; }
@@ -3806,7 +3816,7 @@ button.list-group-item-danger {
 
 .close {
   float: right;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 300;
   line-height: 1;
   color: #000;
@@ -3891,7 +3901,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 2; }
 
 .modal-body {
   position: relative;
@@ -3938,7 +3948,7 @@ button.close {
   font-weight: 400;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.5;
+  line-height: 2;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -3947,7 +3957,7 @@ button.close {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
@@ -4020,7 +4030,7 @@ button.close {
   font-weight: 400;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.5;
+  line-height: 2;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4029,7 +4039,7 @@ button.close {
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -4101,7 +4111,7 @@ button.close {
 .popover-title {
   padding: 8px 14px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-right-radius: calc(0.3rem - 1px);
@@ -4302,7 +4312,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-faded {
-  background-color: #e4e7e8; }
+  background-color: #222324; }
 
 .bg-primary {
   background-color: #39ff14 !important; }
@@ -6810,7 +6820,8 @@ a.text-gray-dark:hover {
 html, body {
   width: 100%;
   height: 100%;
-  font-family: 'Lato'; }
+  font-family: 'Lato';
+  color: #f7f7f9; }
 
 #main-page-bg {
   margin: 0;
@@ -6822,6 +6833,11 @@ html, body {
 #contact-form, #about {
   background-color: #292b2c;
   color: #f7f7f9; }
+  #contact-form .btn-primary, #about .btn-primary {
+    color: #292b2c; }
+  #contact-form .btn-primary:hover, #about .btn-primary:hover {
+    background: none;
+    color: #39ff14; }
 
 #button-menu {
   position: fixed;
@@ -6833,16 +6849,25 @@ html, body {
   position: fixed;
   top: 50%; }
 
+#project-links {
+  margin-left: 10%; }
+
+#nav-menu-main {
+  padding-top: 30%;
+  padding-left: 10%; }
+
 .btn-main-nav {
   font-size: 2em;
   background: none;
   padding: 0.1em .2em;
   margin: 0 .2em .2em .2em;
-  width: 160px;
   border-radius: 5px;
   color: #39ff14;
-  font-family: 'Muli';
-  border: 1px solid #39ff14; }
+  font-family: 'Muli'; }
+
+#calc-close, #connect-close {
+  color: white;
+  margin-bottom: 2em; }
 
 .btn-main-nav:hover, .btn-main-nav:active {
   background-color: #39ff14;
@@ -6850,48 +6875,78 @@ html, body {
   border: 1px solid #39ff14; }
 
 .btn-sub-nav {
-  font-size: 1em;
-  background-color: #39ff14;
-  color: #292b2c;
+  background: none;
+  color: #39ff14;
   font-family: 'Muli';
   border: 1px solid #39ff14;
-  padding: .7em;
+  padding: .5em;
   margin: 0 .2em; }
+
+.btn-sub-nav:hover, .btn-sub-nav:active {
+  background-color: #39ff14;
+  color: #292b2c; }
+
+.btn-outline-primary:hover {
+  color: #292b2c; }
 
 #about-links {
   margin: 1em 0; }
 
-#connect #board {
-  padding: 0;
-  border-spacing: 0; }
-#connect tr {
-  border-collapse: collapse;
-  border: 3px solid blue; }
-#connect td {
-  padding: 0px;
-  background-color: yellow;
-  border: 3px solid blue;
-  border-collapse: collapse;
-  vertical-align: top;
-  align-content: center; }
-#connect .red, #connect .blue, #connect .gray {
-  display: table;
-  border-radius: 500px;
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  border: none;
-  box-shadow: 2px 2px 10px 4px black inset; }
-#connect .red, #connect #redheader {
-  background-color: red; }
-#connect #redheader, #connect #blueheader {
-  color: white;
-  font-size: 24px; }
-#connect .blue, #connect #blueheader {
-  background-color: blue; }
-#connect .gray {
-  background-color: white; }
-#connect button.gray:hover {
-  box-shadow: 5px 5px 20px 10px black inset; }
+#calculator {
+  padding: 3em;
+  margin-top: 3em; }
+  #calculator .btn-lg, #calculator .btn-group-lg > .btn {
+    font-size: 1em;
+    width: 100%; }
+  #calculator #display {
+    height: 2em;
+    width: 100%;
+    color: #39ff14;
+    background-color: #292b2c; }
+  #calculator #see-more {
+    margin-top: 2em; }
+  #calculator #result {
+    margin-left: 2.5em;
+    padding-left: 1em;
+    color: #39ff14;
+    background-color: #292b2c; }
+
+#connect {
+  padding: 3em;
+  margin-top: 3em; }
+  #connect #cnct-cnt {
+    background-color: rgba(0, 0, 0, 0.8); }
+  #connect #board {
+    padding: 0;
+    border-spacing: 0; }
+  #connect tr {
+    border-collapse: collapse;
+    border: 3px solid blue; }
+  #connect td {
+    padding: 0px;
+    background-color: yellow;
+    border: 3px solid blue;
+    border-collapse: collapse;
+    vertical-align: top;
+    align-content: center; }
+  #connect .red, #connect .blue, #connect .gray {
+    display: table;
+    border-radius: 500px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    box-shadow: 2px 2px 10px 4px black inset; }
+  #connect .red, #connect #redheader {
+    background-color: red; }
+  #connect #redheader, #connect #blueheader {
+    color: white;
+    font-size: 24px; }
+  #connect .blue, #connect #blueheader {
+    background-color: blue; }
+  #connect .gray {
+    background-color: white; }
+  #connect button.gray:hover {
+    box-shadow: 5px 5px 20px 10px black inset; }
 
 /*# sourceMappingURL=main.css.map */

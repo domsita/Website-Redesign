@@ -181,9 +181,9 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:       $gray-lighter !default;
+$body-bg:       $gray-dark !default;
 $body-color:    $brand-primary !default;
-$inverse-bg:    $gray-lighter !default;
+$inverse-bg:    $gray-dark !default;
 $inverse-color: $brand-primary !default;
 
 
@@ -249,23 +249,23 @@ $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:   1.25rem !default;
-$font-size-sm:   .875rem !default;
-$font-size-xs:   .75rem !default;
+$font-size-base: 1.25rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.75rem !default;
+$font-size-sm:   1rem !default;
+$font-size-xs:   .8rem !default;
 
 $font-weight-normal: 400 !default;
 $font-weight-bold: 300 !default;
 
 $font-weight-base: $font-weight-normal !default;
-$line-height-base: 1.5 !default;
+$line-height-base: 2.0 !default;
 
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
+$font-size-h1: 3rem !default;
+$font-size-h2: 2.25rem !default;
+$font-size-h3: 2rem !default;
+$font-size-h4: 1.75rem !default;
+$font-size-h5: 1.5rem !default;
+$font-size-h6: 1.25rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;

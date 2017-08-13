@@ -7,6 +7,10 @@ var $result = $(  "#result"  );
 
 // evaluates the expression in #display and places it into #result. displays an error message if the equation is invalid.
 function equals() {
+  while ($(".output").length > 4) {
+    $(".output:last").remove();
+  }
+
   var equation = $display.text();
   try {
     if (eval(equation)) {
