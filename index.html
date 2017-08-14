@@ -3,96 +3,109 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DS</title>
+    <title>Domenic Sita</title>
     <link rel="stylesheet" href="css/main.css">
 
   </head>
 
   <body>
     <div id="main-page-bg">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col">
+                    <div class="row">
+                        <a class="nav-link" href="index.html" id="sitename">Domenic Sita</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <ul class="nav nav-pills justify-content-end">
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="modal" data-target="#about"  href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#contact-form"  href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#" id="connect-open">Connect 4</a>
+                              <a class="dropdown-item" href="#" id="calc-open">Calculator</a>
+                              <a class="dropdown-item" href="eb.html" >Explodi-ball</a>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
       <!-- Main Navigation -->
-      <div class="container-fluid" >
-        <div class="row">
-          <div class="col-4">
-            <div class="row" id="nav-menu-main">
-              <button type="button" class="btn btn-main-nav" id="project-button">Projects</button>
-              <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#about">About</button><br>
-              <button type="button" class="btn btn-main-nav" data-toggle="modal" data-target="#contact-form">Contact</button><br>
-            </div>
-            <div id="project-links" style="display: none;">
-              <a class="btn btn-sub-nav" href="eb.html" >Explodi-ball</a>
-              <a class="btn btn-sub-nav" href="#" id="connect-open">Connect 4</a>
-              <a class="btn btn-sub-nav" href="#" id="calc-open">Calculator</a>
-            </div>
-          </div>
-          <div class="col-8">
-            <!-- Calculator container -->
-            <div class="container" id="calculator" style="display:none;">
-              <div class="row justify-content-start">
-                <a class="btn btn-danger" id="calc-close">X</a>
+      <div class="container" >
+        <!-- Calculator container -->
+        <div class="container" id="calculator" style="display:none;">
+          <div class="row justify-content-start">
+            <a class="btn btn-danger" id="calc-close">X</a>
 
-                <div class="container">
-                  <div class="row">
-                    <div class="col-6">
-                      <div><table>
-                        <tr colspan="4"><div id="display"></div></tr>
-                        <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(1)">1</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
-                        </tr><tr>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
-                        </tr><tr>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
-                        </tr><tr>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
-                           <td></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
-                           <td></td>
-                           <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
-                        </tr>
-                      </table></div>
-                      <div class="row justify-content-center">
-                          <a href="https://github.com/domsita/Projects/blob/master/Website/calc.js" class="btn btn-outline-primary" target="_blank" id="see-more">Check out the code</a>
-                      </div>
-
-                    </div>
-                    <div class="col-6">
-                      <div id="result"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Calculator  -->
-            <!-- Connect 4 container -->
-            <div class="container" id="connect" >
-              <div class="row justify-content-start">
-                <a class="btn btn-danger" id="connect-close">X</a>
-                <div class="container" id="cnct-cnt">
-                  <div class="row justify-content-center"><div id="topDisplay"><h1>CONNECT 4</h1></div></div>
-                  <div class="row justify-content-center"><div id="board"></div></div>
-                  <div class="row justify-content-center"><button id="newButton" class="btn" onclick="start()">PLAY</button></div>
+            <div class="container" id="clc-cnt">
+              <div class="row">
+                <div class="col-6">
+                  <div><table>
+                    <tr colspan="4"><div id="display"></div></tr>
+                    <tr>    <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('+')">+</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(1)">1</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(2)">2</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(3)">3</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="removeLast()">&larr;</button></td>
+                    </tr><tr>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('-')">-</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(4)">4</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(5)">5</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(6)">6</button></td>
+                    </tr><tr>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('/')">/</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(7)">7</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(8)">8</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(9)">9</button></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="clearAll()">clear</button></td>
+                    </tr><tr>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push('*')">*</button></td>
+                       <td></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="push(0)">0</button></td>
+                       <td></td>
+                       <td><button class="btn btn-secondary btn-lg" type="button" onclick="equals()">Enter</button></td>
+                    </tr>
+                  </table></div>
                   <div class="row justify-content-center">
-                    <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="btn" target="_blank">Check out the code</a>
+                      <a href="https://github.com/domsita/Projects/blob/master/Website/calc.js" class="btn btn-outline-primary" target="_blank" id="see-more">Check out the code</a>
                   </div>
+
+                </div>
+                <div class="col-6">
+                  <div id="result"></div>
                 </div>
               </div>
             </div>
-            <!-- End Connect 4  -->
           </div>
-
-
-
+        </div>
+        <!-- End Calculator  -->
+        <!-- Connect 4 container -->
+        <div class="container" id="connect" style="display:none;">
+          <div class="row justify-content-start">
+            <a class="btn btn-danger" id="connect-close">X</a>
+            <div class="container" id="cnct-cnt">
+              <div class="row justify-content-center"><div id="topDisplay"><h1>CONNECT 4</h1></div></div>
+              <div class="row justify-content-center"><div id="board"></div></div>
+              <div class="row justify-content-center"><button id="newButton" class="btn" onclick="start()">PLAY</button></div>
+              <div class="row justify-content-center">
+                <a href="https://github.com/domsita/Projects/blob/master/Website/connect.js" class="btn" target="_blank">Check out the code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Connect 4  -->
         </div>
       </div>
 
@@ -171,11 +184,6 @@
                         I made this site to showcase some of the projects I've been working on recently and I plan to update it regularly.
                         Be sure to check back to see more of what I've been working on.</p>
                     </div>
-                    <div class="row align-items-center">
-                          <h5>I'd love to hear from you!</h5>
-                          <span style="margin-left: 1.5em;"></span>
-                          <button type="button" class="btn btn-primary" id="aToC">Contact Me</button>
-                    </div>
                   </div>
                 </div>
                 <div class="row justify-content-center" id="about-links">
@@ -198,6 +206,7 @@
               </div>
             </div>
             <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="aToC">Contact Me</button>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>

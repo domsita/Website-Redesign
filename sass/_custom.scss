@@ -7,7 +7,22 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Lato';
+    font-size: 1em;
     color: $gray-lightest;
+}
+
+#logo-img {
+    padding: .5em;
+}
+
+#sitename {
+    font-size: 1.2em;
+    color: $gray-lightest;
+    font-family: 'Muli';
+}
+
+.btn-danger {
+    font-size: 1em;
 }
 
 #main-page-bg {
@@ -30,79 +45,63 @@ html, body {
     }
 }
 
-#button-menu {
-    position: fixed;
-    top: 60%;
-    ul {
-        list-style: none;
-    }
-}
-
-#projects {
-    position: fixed;
-    top: 50%;
-
-}
-#project-links {
-  margin-left: 10%;
-}
-
-#nav-menu-main {
-  padding-top: 30%;
-  padding-left: 10%;
-}
-
-.btn-main-nav {
-  font-size: 2em;
+.nav-item a {
+  font-size: 1.2em;
   background: none;
-  padding: 0.1em .2em;
-  margin: 0 .2em .2em .2em;
-
-  border-radius: 5px;
-  color: $ng;
+  color: $gray-lightest;
   font-family: 'Muli';
+}
 
+nav-item .show {
+    background-color: $gray-dark;
+    color: $ng;
+}
+
+.nav-item:hover .nav-link, .nav-item:active .nav-link {
+    color: $ng;
+}
+
+.dropdown-menu {
+    background:none;
+    color: $gray-lightest;
+}
+
+a.dropdown-item {
+    font-size: 1em;
+    padding: 0 1.5em;
+}
+
+.dropdown-item:hover {
+    background: none !important;
+    color: $ng;
 }
 
 #calc-close, #connect-close {
   color: white;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
-.btn-main-nav:hover, .btn-main-nav:active {
+.nav-item.show .nav-link {
+    background: none !important;
+    color: $ng !important;
+}
+
+.btn-main-nav:hover {
     background-color: $ng;
     color: $gray-dark;
     border: 1px solid $ng;
-}
-
-.btn-sub-nav {
-  background: none;
-  color: $ng;
-  font-family: 'Muli';
-  border: 1px solid $ng;
-  padding: .5em;
-  margin: 0 .2em;
-}
-
-.btn-sub-nav:hover, .btn-sub-nav:active {
-  background-color: $ng;
-  color: $gray-dark;
 }
 
 .btn-outline-primary:hover {
   color: $gray-dark;
 }
 
-#about-links {
-    margin: 1em 0;
-}
-
-#tech-skills {
-}
-
 #calculator {
-  padding: 3em;
-  margin-top: 3em;
+  padding: 2em;
+
+  #clc-cnt {
+    background-color:  $p-bg;
+  }
 
   .btn-lg {
     font-size: 1em;
@@ -121,6 +120,7 @@ html, body {
   }
 
   #result {
+    min-height: 2em;
     margin-left: 2.5em;
     padding-left: 1em;
     color: $ng;
@@ -131,7 +131,6 @@ html, body {
 
 #connect {
   padding: 3em;
-  margin-top: 3em;
   #cnct-cnt {
       background-color: $p-bg;
   }
