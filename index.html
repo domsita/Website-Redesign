@@ -117,29 +117,31 @@
             <div class="modal-header">  <h5 class="modal-title" id="contact-form-modal">Send me a Message.</h5>   </div>
             <div class="modal-body">
               <div class="container-fluid">
-                <form action="#" method="post">
+                <form action="scripts/sendMail.php" id="contact-form" method="post">
+
+
                   <div class="form-group row align-items-center">
                       <!-- name input -->
                       <label class="col-md-1 col-form-label col-form-label" for="name">Name:</label>
                       <div class="col-md-3">
-                          <input class="form-control form-control-sm" type="text" value="" id="name">
+                          <input class="form-control form-control-sm" name="name" type="text" value="" id="name">
                       </div>
                       <!-- email input -->
                       <label class="col-md-1 col-form-label col-form-label" for="email">Email:</label>
                       <div class="col-md-3">
-                          <input class="form-control form-control-sm" type="text" value="" id="email">
+                          <input class="form-control form-control-sm" name="email" type="text" value="" id="email">
                       </div>
                       <!-- phone input -->
                       <label class="col-md-1 col-form-label col-form-label" for="phone">Phone:</label>
                       <div class="col-md-3">
-                          <input class="form-control form-control-sm" type="tel" value="" id="phone">
+                          <input class="form-control form-control-sm" name="phone" type="tel" value="" id="phone">
                       </div>
                   </div>
 
                   <div class="form-group row align-items-center">
                     <label for="message" class="form-label">Message:</label>
                     <div class="col-md-7">
-                      <textarea class="form-control" id="message" rows="4" style="width: 100%;"></textarea>
+                      <textarea class="form-control" name="message" id="message" rows="4" style="width: 100%;"></textarea>
                     </div>
 
                     <label for="phone-pref" class="col-form-label">You Prefer:</label>
@@ -153,7 +155,9 @@
                   </div>
 
                   <div class="row justify-content-center">
-                    <button type="button" class="btn btn-primary">Send Message</button>
+                      <div id="captchaBox">
+                          <div id="submitBox"><input type="submit" id="submitContact" class="btn btn-primary" value="Send Message"></input></div>
+                      </div>
                   </div>
 
                 </form>
@@ -188,7 +192,7 @@
                 </div>
                 <div class="row justify-content-center" id="about-links">
                   <div class="btn-group" role="group" aria-label="...">
-                      <a href="#" class="btn btn-outline-primary">My Resume</a>
+                      <a href="/DSitaResume.pdf" class="btn btn-outline-primary">My Resume</a>
                       <a href="http://www.linkedin.com/in/domenic-sita" class="btn btn-outline-primary">LinkedIn</a>
                       <a href="http://github.com/domsita" class="btn btn-outline-primary">GitHub</a>
                       <a href="http://www.hackerrank.com/domsita" class="btn btn-outline-primary">HackerRank</a>
